@@ -1,0 +1,2 @@
+printing to stdout
+First char of file: H
