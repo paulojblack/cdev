@@ -24,7 +24,7 @@ int main() {
 
     printf("Whitespace characters: %d\n", whitespace);
     printf("Other characters: %d\n", chars);
-    printf("Digits:");
+    printf("Digits: \n");
 
     for (int i = 0; i < ARR_LEN; i++) {
         printf("%d: %d\n", i, ndigit[i]);
