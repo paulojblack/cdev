@@ -7,9 +7,15 @@ int main() {
     size_t len = 0; // This is the length of the buffer, which dynamically resizes in 4byte increments to contain whatever the largest line length seen so far is
     ssize_t nread; // ssize_t, return type of 
 
+    int numBigNuff = 0;
     while ((nread = getline(&line, &len, stdin)) > 0) {
         printf("Retrieved line of length %zd:\n", nread);
         printf("What is len %zd:\n", len);
 
+        if (nread > 90) {
+            ++numBigNuff;
+        }
     }
+
+    printf("Found %d lines larger than 80 chars\n", numBigNuff);
 }
