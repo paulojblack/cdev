@@ -1,9 +1,22 @@
 #include <stdio.h>
 
 int main(void) {
-    long nc = 0;
+    int c, nl;
 
-    // while(getchar() != EOF) ++nc;
-    printf("%c", 65);
-    // printf("%ld\n", nc);
+    nl = 0;
+    while( (c = getchar()) != EOF) {
+        if (c == ' ') {
+            while ((c = getchar()) == ' ') {
+                continue;
+            }
+            putchar(' ');
+            putchar(c);
+        } else if (c == '\n') {
+            putchar('\n');
+        } else {
+            putchar(c);
+        }
+    }
+
+    printf("%d\n", nl);
 }
